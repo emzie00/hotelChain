@@ -79,7 +79,7 @@ nav {
         color: #F2DCE4;
     }
     li.active a {
-        color: $secondaryColor;
+        color: black;
     }
 }
 /* MAIN  */
@@ -132,10 +132,10 @@ main {
 
 
 /* FOOTER  */
-#footerWrapper {background-color: #1b1b1b; }
+#footerWrapper {background-color: #733042; }
 footer {
     font-size: .85rem;
 	padding: 1rem 0;
-	color: #bbb;
+	color: #F2DCE4;
 	text-align: center;
 }

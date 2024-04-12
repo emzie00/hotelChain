@@ -193,7 +193,7 @@ nav ul li a:hover {
   color: #F2DCE4;
 }
 nav li.active a {
-  color: #F26B5E;
+  color: black;
 }
 
 /* MAIN  */
@@ -243,13 +243,13 @@ main h1 {
 
 /* FOOTER  */
 #footerWrapper {
-  background-color: #1b1b1b;
+  background-color: #733042;
 }
 
 footer {
   font-size: 0.85rem;
   padding: 1rem 0;
-  color: #bbb;
+  color: #F2DCE4;
   text-align: center;
 }
 
