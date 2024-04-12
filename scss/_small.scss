@@ -32,7 +32,7 @@ header {
         font-size: 1.6rem;
         font-weight: $lightWeight;
         padding-left: .5rem;
-        color: $primaryColor;
+        color: #733042;
     }
     button {
         width: 48px;
@@ -79,7 +79,7 @@ nav {
         color: #F2DCE4;
     }
     li.active a {
-        color: $primaryColor;
+        color: $secondaryColor;
     }
 }
 /* MAIN  */
@@ -88,7 +88,7 @@ main {
 	h1 {
         padding: 1rem 2vw .5rem 2vw; 
         font-size: 1.5rem; 
-        color: $secondaryColor;
+        color: #733042;
         font-weight: $lightWeight
     }
 } // end main
