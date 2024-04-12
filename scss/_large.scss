@@ -31,7 +31,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr 1fr;
     section {
-        grid-template-columns: 
+        grid-template-areas: 
         "photo name" 
         "photo address" 
         "photo phone";
