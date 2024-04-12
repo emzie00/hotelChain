@@ -1,0 +1,40 @@
+header, nav, main {
+    max-width: 1240px;
+    margin: auto;
+}
+header, nav, main, footer {
+    margin: 0 auto;
+    max-width: 60rem;
+}
+#hamburgerBtn {
+    display: none;
+}
+nav {
+    position: static;
+    transform: translateX(0);
+    width: auto;
+    div {
+        display: none;
+    }
+    ul {
+        display: flex;
+        margin-left: 2%;
+        border-left: 1px solid rgba(115,48,66,.2);
+    }
+    ul li a {
+        border: none;
+        border-right: 1px solid rgba(115,48,66,.2);
+        padding: .6rem 1.5rem;
+    }
+}
+#cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    section {
+        grid-template-columns: 
+        "photo name" 
+        "photo address" 
+        "photo phone";
+        column-gap: 8px;
+    }
+}
