@@ -6,13 +6,22 @@
         font-size: 2rem;
     }
 }
+nav {
+    a {
+        ion-icon {
+            display: none;
+        }
+        span {
+            display: block;
+        }
+    }
 
-#cards {
+}
+.allCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gutter;
     section {
-        grid-template-areas: 
-        "photo name" 
-        "photo address" 
-        "photo phone";
-        column-gap: 8px;
+        flex-basis: calc(50% - ($gutter/2));
     }
 }

@@ -3,54 +3,287 @@
 
 <head>
 	<meta charset="utf-8"/>
-	<title>Hotel Chain</title>
+	<title>Single Page Portfolio</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<link rel="stylesheet" type="text/css" media="screen" href="css/styles.css"/>
 
 <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div id="pageWrapper">
-        <div class="content">
+    
 <div id="headerWrapper">
 	<header>
-        <ion-icon name="bed-outline"></ion-icon>
-		<h1>Hotel Chain</h1>
-        <button id="hamburgerBtn">&#9776;</button>
+        <img src="images/logo.png" alt="logo">
+		<h1>Single Page Portfolio</h1>
 	</header>
 </div><!-- end header wrapper -->
-
+<div id="navWrapper">
     <nav>
-        <div>Hotel Chain</div>
         <ul>
-        <li><a href="#">Clients</a>
-        <li><a href="#">Services</a></li>
-        <li class="active"><a href="#">Locations</a></li>
-        <li><a href="#">Our Team</a></li>
-        <li><a href="#">Contact</a></li>
+        <li class="active"><a href="#one"><ion-icon name="car-sport-outline"></ion-icon><span>Introduction</span></a></li>
+        <li><a href="#two"><ion-icon name="hammer-outline"></ion-icon><span>Teams</span></a></li>
+        <li><a href="#three"><ion-icon name="earth-outline"></ion-icon><span>Locations</span></a></li>
+        <li><a href="#four"><ion-icon name="person-circle-outline"></ion-icon><span>Drivers</span></a></li>
+        <li><a href="#five"><ion-icon name="checkmark-done-circle-outline"></ion-icon><span>Rankings</span></a></li>
     </ul>
     </nav>
+</div>
 
 <div id="mainWrapper">
     <main>
-    <h1>Locations</h1>
-    <div id="cards"></div>
+  <section id="one">
+    <h1>Introduction to Formula One</h1>
+        <p>Welcome to the electrifying world of Formula One, where cutting-edge technology meets the thrill of speed in a global showcase of automotive mastery. Formula One, often dubbed the pinnacle of motorsport, is a high-octane fusion of engineering brilliance, lightning-fast reflexes, and sheer adrenaline.<br>
+<br>
+            Picture this: sleek, aerodynamic machines hurtling around twisting circuits at mind-bending speeds, driven by some of the finest racing talents on the planet. From the iconic Monaco Grand Prix to the ultra-modern circuits of Abu Dhabi and Singapore, each race is a spectacle of precision and passion, captivating millions of fans worldwide.<br>
+            <br>
+            But Formula One isn't just about the races—it's a relentless pursuit of innovation and excellence. Teams push the boundaries of technology to gain the slightest edge, constantly refining their cars to squeeze out every ounce of performance. From advanced aerodynamics to hybrid power units, Formula One cars represent the forefront of automotive engineering.<br>
+            <br>
+            Beyond the technical marvels, Formula One is a sport of human drama and rivalry. Behind the wheel, drivers battle not only their opponents but also the limits of physics, showcasing unmatched skill and bravery. Meanwhile, teams strategize and strategize again, orchestrating complex race plans to outwit their competitors and claim victory.<br>
+            <br>
+            Join us as we delve into the heart-pounding world of Formula One, where speed, precision, and passion collide to create moments of pure magic on and off the track. Whether you're a seasoned enthusiast or a newcomer to the sport, there's always something exhilarating to discover in the world of Formula One. So buckle up and get ready for the ride of a lifetime!</p>
+  </section>
+  <section id="two">
+    <h2>Teams</h2>
+    <div class="allCards">
+        <section>
+            <img src="images/redBull.png" alt="Red Bull Logo" width="300" height="169" class="e2e">
+            <h3>Red Bull Racing</h3>
+        </section>
+        <section>
+            <img src="images/ferrari.png" alt="Ferrari Logo" width="300" height="143" class="e2e">
+            <h3>Ferrari</h3>
+        </section>
+        <section>
+            <img src="images/mclaren.png" alt="Mclaren Logo" width="300" height="169" class="e2e">
+            <h3>McLaren</h3>
+        </section>
+        <section>
+            <img src="images/mercedes.png" alt="Mercedes Logo" width="300" height="169" class="e2e">
+            <h3>Mercedes</h3>
+        </section>
+        <section>
+            <img src="images/astonMartin.png" alt="Aston Martin Logo" width="300" height="169" class="e2e">
+            <h3>Aston Martin</h3>
+        </section>
+        <section>
+            <img src="images/rb.png" alt="RB Logo" width="300" height="169" class="e2e">
+            <h3>RB</h3>
+        </section>
+        <section>
+            <img src="images/haas.png" alt="Haas Logo" width="300" height="169" class="e2e">
+            <h3>Haas F1 Team</h3>
+        </section>
+        <section>
+            <img src="images/williams.png" alt="Williams Logo" width="300" height="169" class="e2e">
+            <h3>Williams</h3>
+        </section>
+        <section>
+            <img src="images/alpine.png" alt="Alpine Logo" width="300" height="169" class="e2e">
+            <h3>Alpine</h3>
+        </section>
+    </div>
+  </section>
+  <section id="three">
+    <h2>Locations</h2>
+    <div class="allCards">
+        <section>
+            <h3>Bahrain</h3>
+            <p>Feb 29 - Mar 2</p>
+        </section>
+        <section>
+            <h3>Saudi Arabia</h3>
+            <p>Mar 7 - Mar 9</p>
+        </section>
+        <section>
+            <h3>Australia</h3>
+            <p>Mar 22 - Mar 24</p>
+        </section>
+        <section>
+            <h3>Japan</h3>
+            <p>Apr 5 - Apr 7</p>
+        </section>
+        <section>
+            <h3>China</h3>
+            <p>Apr 19 - Apr 21</p>
+        </section>
+        <section>
+            <h3>United States</h3>
+            <p>May 3 - May 5</p>
+        </section>
+        <section>
+            <h3>Italy</h3>
+            <p>May 17 - May 19</p>
+        </section>
+        <section>
+            <h3>Monaco</h3>
+            <p>May 24 - Mar 26</p>
+        </section>
+        <section>
+            <h3>Canada</h3>
+            <p>Jun 7 - Jun 9</p>
+        </section>
+        <section>
+            <h3>Spain</h3>
+            <p>Jun 21 - Jun 23</p>
+        </section>
+        <section>
+            <h3>Austria</h3>
+            <p>Jun 28 - Mar 30</p>
+        </section>
+        <section>
+            <h3>Great Britain</h3>
+            <p>Jul 5 - Jul 7</p>
+        </section>
+        <section>
+            <h3>Hungary</h3>
+            <p>Jul 19 - Jul 21</p>
+        </section>
+        <section>
+            <h3>Belgium</h3>
+            <p>Jul 26 - Jul 28</p>
+        </section>
+        <section>
+            <h3>Netherlands</h3>
+            <p>Aug 23 - Aug 25</p>
+        </section>
+        <section>
+            <h3>Italy</h3>
+            <p>Aug 30 - Sep 1</p>
+        </section>
+        <section>
+            <h3>Azeerbaijan</h3>
+            <p>Sep 13 - Sep 15</p>
+        </section>
+        <section>
+            <h3>Singapore</h3>
+            <p>Sep 20 - Sep 22</p>
+        </section>
+        <section>
+            <h3>United States</h3>
+            <p>Oct 18 - Oct 20</p>
+        </section>
+        <section>
+            <h3>Mexico</h3>
+            <p>Oct 25 - Oct 27</p>
+        </section>
+        <section>
+            <h3>Brazil</h3>
+            <p>Nov 1 - Nov 3</p>
+        </section>
+        <section>
+            <h3>United States</h3>
+            <p>Nov 21 - Nov 23</p>
+        </section>
+        <section>
+            <h3>Qatar</h3>
+            <p>Nov 29 - Dec 1</p>
+        </section>
+        <section>
+            <h3>Abu Dhabi</h3>
+            <p>Dec 6 - Dec 8</p>
+        </section>
+    </div>
+  </section>
+  <section id="four">
+    <h2>Drivers</h2>
+    <div class="allCards">
+        <section>
+            <img src="images/maxVerstappen.png" alt="Max Verstappen" width="300" height="300" class="e2e">
+            <h3>Max Verstappen</h3>
+        </section>
+        <section>
+            <img src="images/sergioPerez.png" alt="Sergio Perez" width="300" height="300" class="e2e">
+            <h3>Sergio Perez</h3>
+        </section>
+        <section>
+            <img src="images/charlesLeclerc.png" alt="Charles Leclerc" width="300" height="300" class="e2e">
+            <h3>Charles Leclerc</h3>
+            </section>
+            <section>
+                <img src="images/carlosSainz.png" alt="Carlos Sainz" width="300" height="300" class="e2e">
+                <h3>Carlos Sainz</h3>
+            </section>
+            <section>
+                <img src="images/landoNorris.png" alt="Lando Norris" width="300" height="300" class="e2e">
+                <h3>Lando Norris</h3>
+            </section>
+            <section>
+                <img src="images/oscarPiastri.png" alt="Oscar Piastri" width="300" height="300" class="e2e">
+                <h3>Oscar Piastri</h3>
+            </section>
+            <section>
+                <img src="images/georgeRussell.png" alt="George Russell" width="300" height="300" class="e2e">
+                <h3>George Russell</h3>
+            </section>
+            <section>
+                <img src="images/fernandoAlonso.png" alt="Fernando Alonso" width="300" height="300" class="e2e">
+                <h3>Fernando Alonso</h3>
+            </section>
+            <section>
+                <img src="images/lewisHamilton.png" alt="Lewis Hamilton" width="300" height="300" class="e2e">
+                <h3>Lewis Hamilton</h3>
+            </section>
+            <section>
+                <img src="images/lanceStroll.png" alt="Lance Stroll" width="300" height="300" class="e2e">
+                <h3>Lance Stroll</h3>
+            </section>
+            <section>
+                <img src="images/yukiTsunoda.png" alt="Yuki Tsunoda" width="300" height="300" class="e2e">
+                <h3>Yuki Tsunoda</h3>
+            </section>
+            <section>
+                <img src="images/nicoHulkenberg.png" alt="Nico Hulkenberg" width="300" height="300" class="e2e">
+                <h3>Nico Hulkenberg</h3>
+            </section>
+            <section>
+                <img src="images/kevinMagnussen.png" alt="Kevin Magnussen" width="300" height="300" class="e2e">
+                <h3>Kevin Magnussen</h3>
+            </section>
+            <section>
+                <img src="images/alexAlbon.png" alt="Alex Albon" width="300" height="300" class="e2e">
+                <h3>Alex Albon</h3>
+            </section>
+            <section>
+                <img src="images/zhouGuanyu.png" alt="Zhou Guanyu" width="300" height="300" class="e2e">
+                <h3>Zhou Guanyu</h3>
+            </section>
+            <section>
+                <img src="images/danielRicciardo.png" alt="Daniel Ricciardo" width="300" height="300" class="e2e">
+                <h3>Daniel Ricciardo</h3>
+            </section>
+            <section>
+                <img src="images/pierreGasly.png" alt="Pierre Gasly" width="300" height="300" class="e2e">
+                <h3>Pierre Gasly</h3>
+            </section>
+            <section>
+                <img src="images/valtteriBottas.png" alt="Valtteri Bottas" width="300" height="300" class="e2e">
+                <h3>Valtteri Bottas</h3>
+            </section>
+            <section>
+                <img src="images/loganSargeant.png" alt="Logan Sargeant" width="300" height="300" class="e2e">
+                <h3>Logan Sargeant</h3>
+            </section>
+    </div>
+  </section>
+  <section id="five">
+    <h2>Rankings</h2>
+    <img class="rankings" src="images/rankings.png" alt="rankings image" width="2602" height="1190">
+  </section>
     </main>
 </div><!-- end main wrapper -->
     
 <div id="footerWrapper">
     <footer>
-        <p>Copyright &copy; <span id="year">X</span> &bull; Emma Church</p>
+        <p>Copyright &copy; 2024 &bull; Emma Church</p>
     </footer>
 </div> <!-- end footer wrapper -->
-</div>
-</div>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<script src="js/scripts.js" type="module"></script>
+<script src="js/scripts.js"></script>
 </body>
 </html> 

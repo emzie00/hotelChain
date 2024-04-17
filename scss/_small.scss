@@ -1,5 +1,5 @@
 /* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
-html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; scroll-behavior: smooth;}
 
 /*  apply a natural box layout model to all elements  */
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
@@ -11,17 +11,6 @@ body {
 	font-weight: $lightWeight;
     min-width: 320px;
 }
-#pageWrapper {
-    position: relative;
-    overflow-x: hidden;
-}
-.moveOver>.content {
-    transform: translateX(-180px);
-}
-.content {
-    transition: transform 500ms ease;
-}
-
 /* HEADER  */
 header {
     display: grid;
@@ -32,110 +21,110 @@ header {
         font-size: 1.6rem;
         font-weight: $lightWeight;
         padding-left: .5rem;
-        color: #733042;
-    }
-    button {
-        width: 48px;
-        height: 48px;
-        margin: 0;
-        align-self: start;
-        background: none;
-        border: none;
-        font-size: 1.5rem;
-        text-align: right;
-        color: #733042;
-    }
-    ion-icon {
-        font-size: 2.5rem;
-        color: #733042;
+        color: $fontColor;
     }
 } // end header
-nav {
-    background: #F2DCE4;
-    width: 180px;
-    position: absolute;
+#navWrapper {
+    background-color: $menuColor;
+    position: sticky;
     top: 0;
-    right: 0;
-    bottom: 0;
-    transform: translateX(100%);
-    div {
-        display: block;
-        text-align: center;
-        padding: 1.5rem;
-        font-size: 1.1rem;
-        background-color: #73675A;
-        color: #F2DCE4;
+}
+nav {
+    ul {
+       list-style-type: none;
+       padding: 0;
+       margin: 0;
+       display: flex;
     }
-    ul li a {
+    li {
+        flex: 1;
+    }
+    li.active {
+        background-color: darken($menuColor, 10%);
+    }
+    a {
         display: block;
-        padding: .9rem .5rem;
-        text-align: right;
-        border-bottom: 1px rgba(115,103,90,.25) solid;
+        padding: .75rem;
+        text-align: center;
+        border-bottom: 1px rgba(47,89,85,.25) solid;
         text-decoration: none;
-        color: #733042;
+        color: $fontColor;
+        ion-icon {
+            width: 25px;
+        }
+        span {
+            display: none;
+        }
     }
     ul li a:hover {
-        background-color: $secondaryColor;
-        color: #F2DCE4;
-    }
-    li.active a {
-        color: black;
+        background-color: lighten($menuColor, 10%);
+        color: #F2C849;
     }
 }
 /* MAIN  */
 main {
- 	p {padding: .5rem 2vw; color: #333; line-height: 125%;}
+ 	p {padding: .5rem 2vw; color: $fontColor; line-height: 125%;}
 	h1 {
         padding: 1rem 2vw .5rem 2vw; 
         font-size: 1.5rem; 
-        color: #733042;
-        font-weight: $lightWeight
+        color: $primaryColor;
+        font-weight: $lightWeight;
     }
 } // end main
-#cards {
-    section {
-        display: grid;
-        grid-template-areas: 
-        "name" 
-        "photo" 
-        "address" 
-        "phone";
-        margin: .7rem;
-        padding: 1rem;
-        background-color: #733042;
-    }
-    img {
-        grid-area: photo;
-        width: 100%;
-        height: auto;
-    }
+section {
     h2 {
-        grid-area: name;
-        color: #F2DCE4;
-        text-align: center;
-        padding-bottom: .5rem;
-    }
-    address {
-        grid-area: address;
-        padding-top: .5rem;
-        padding-bottom: .5rem;
-        text-align: center;
-        color: #F2DCE4;
-    }
-    a {
-        grid-area: phone;
-        text-align: center;
-        color: #F2DCE4;
-        text-decoration: none;
+        padding: 1rem 2vw .5rem 2vw; 
+        font-size: 1.5rem; 
+        color: $primaryColor;
+        font-weight: $lightWeight;
     }
 }
-
-
+#one {
+    p {
+       font-size: 1rem;
+       height: 100vh;
+    }
+}
+.allCards {
+    padding: 0 $gutter;
+    section {
+        border: solid 1px $secondaryColor;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 1rem 0;
+        h3, p, img {
+            margin: 0;
+            padding: 1rem $gutter;
+        }
+        h3 {
+            background-color: $fontColor;
+            font-size: 1.5rem;
+            text-align: center;
+            color: white;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        img.e2e {
+        padding: 0;
+        }
+        p {
+            font-style: italic;
+            text-align: center;
+        }
+    }
+}
+.rankings {
+    width: 100%;
+    height: auto;
+}
 /* FOOTER  */
-#footerWrapper {background-color: #733042; }
+#footerWrapper {background-color: $secondaryColor; }
 footer {
     font-size: .85rem;
 	padding: 1rem 0;
-	color: #F2DCE4;
+	color: $fontColor;
 	text-align: center;
 }

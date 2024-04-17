@@ -104,6 +104,7 @@ input, select {
 html {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
+  scroll-behavior: smooth;
 }
 
 /*  apply a natural box layout model to all elements  */
@@ -115,23 +116,10 @@ html {
 
 /* BODY  */
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 16px;
   font-weight: 400;
   min-width: 320px;
-}
-
-#pageWrapper {
-  position: relative;
-  overflow-x: hidden;
-}
-
-.moveOver > .content {
-  transform: translateX(-180px);
-}
-
-.content {
-  transition: transform 500ms ease;
 }
 
 /* HEADER  */
@@ -145,111 +133,117 @@ header h1 {
   font-size: 1.6rem;
   font-weight: 400;
   padding-left: 0.5rem;
-  color: #733042;
-}
-header button {
-  width: 48px;
-  height: 48px;
-  margin: 0;
-  align-self: start;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  text-align: right;
-  color: #733042;
-}
-header ion-icon {
-  font-size: 2.5rem;
-  color: #733042;
+  color: #2F5955;
 }
 
-nav {
-  background: #F2DCE4;
-  width: 180px;
-  position: absolute;
+#navWrapper {
+  background-color: #56BF84;
+  position: sticky;
   top: 0;
-  right: 0;
-  bottom: 0;
-  transform: translateX(100%);
 }
-nav div {
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+nav li {
+  flex: 1;
+}
+nav li.active {
+  background-color: #3ea46b;
+}
+nav a {
   display: block;
+  padding: 0.75rem;
   text-align: center;
-  padding: 1.5rem;
-  font-size: 1.1rem;
-  background-color: #73675A;
-  color: #F2DCE4;
-}
-nav ul li a {
-  display: block;
-  padding: 0.9rem 0.5rem;
-  text-align: right;
-  border-bottom: 1px rgba(115, 103, 90, 0.25) solid;
+  border-bottom: 1px rgba(47, 89, 85, 0.25) solid;
   text-decoration: none;
-  color: #733042;
+  color: #2F5955;
+}
+nav a ion-icon {
+  width: 25px;
+}
+nav a span {
+  display: none;
 }
 nav ul li a:hover {
-  background-color: #F26B5E;
-  color: #F2DCE4;
-}
-nav li.active a {
-  color: black;
+  background-color: #7bcd9f;
+  color: #F2C849;
 }
 
 /* MAIN  */
 main p {
   padding: 0.5rem 2vw;
-  color: #333;
+  color: #2F5955;
   line-height: 125%;
 }
 main h1 {
   padding: 1rem 2vw 0.5rem 2vw;
   font-size: 1.5rem;
-  color: #733042;
+  color: #F25244;
   font-weight: 400;
 }
 
-#cards section {
-  display: grid;
-  grid-template-areas: "name" "photo" "address" "phone";
-  margin: 0.7rem;
-  padding: 1rem;
-  background-color: #733042;
+section h2 {
+  padding: 1rem 2vw 0.5rem 2vw;
+  font-size: 1.5rem;
+  color: #F25244;
+  font-weight: 400;
 }
-#cards img {
-  grid-area: photo;
+
+#one p {
+  font-size: 1rem;
+  height: 100vh;
+}
+
+.allCards {
+  padding: 0 16px;
+}
+.allCards section {
+  border: solid 1px #F2913D;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1rem 0;
+}
+.allCards section h3, .allCards section p, .allCards section img {
+  margin: 0;
+  padding: 1rem 16px;
+}
+.allCards section h3 {
+  background-color: #2F5955;
+  font-size: 1.5rem;
+  text-align: center;
+  color: white;
+}
+.allCards section img {
   width: 100%;
   height: auto;
+  display: block;
 }
-#cards h2 {
-  grid-area: name;
-  color: #F2DCE4;
-  text-align: center;
-  padding-bottom: 0.5rem;
+.allCards section img.e2e {
+  padding: 0;
 }
-#cards address {
-  grid-area: address;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+.allCards section p {
+  font-style: italic;
   text-align: center;
-  color: #F2DCE4;
 }
-#cards a {
-  grid-area: phone;
-  text-align: center;
-  color: #F2DCE4;
-  text-decoration: none;
+
+.rankings {
+  width: 100%;
+  height: auto;
 }
 
 /* FOOTER  */
 #footerWrapper {
-  background-color: #733042;
+  background-color: #F2913D;
 }
 
 footer {
   font-size: 0.85rem;
   padding: 1rem 0;
-  color: #F2DCE4;
+  color: #2F5955;
   text-align: center;
 }
 
@@ -260,9 +254,19 @@ footer {
   #headerWrapper h1 {
     font-size: 2rem;
   }
-  #cards section {
-    grid-template-areas: "photo name" "photo address" "photo phone";
-    column-gap: 8px;
+  nav a ion-icon {
+    display: none;
+  }
+  nav a span {
+    display: block;
+  }
+  .allCards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .allCards section {
+    flex-basis: calc(50% - 8px);
   }
 }
 @media only screen and (min-width: 64rem) {
@@ -270,37 +274,24 @@ footer {
     max-width: 1240px;
     margin: auto;
   }
-  header, nav, main, footer {
-    margin: 0 auto;
-    max-width: 60rem;
+  body {
+    display: grid;
+    grid-template-columns: 250px auto;
   }
-  #hamburgerBtn {
-    display: none;
-  }
-  nav {
-    position: static;
-    transform: translateX(0);
-    width: auto;
-  }
-  nav div {
-    display: none;
+  #navWrapper {
+    grid-row: 1/span 3;
+    position: relative;
   }
   nav ul {
-    display: flex;
-    margin-left: 2%;
-    border-left: 1px solid rgba(115, 48, 66, 0.2);
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    position: fixed;
   }
-  nav ul li a {
-    border: none;
-    border-right: 1px solid rgba(115, 48, 66, 0.2);
-    padding: 0.6rem 1.5rem;
+  nav ul li {
+    flex: none;
   }
-  #cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-  #cards section {
-    grid-template-areas: "photo name" "photo address" "photo phone";
-    column-gap: 8px;
+  .allCards section {
+    flex-basis: calc(33.333% - 10.6666666667px);
   }
 }
